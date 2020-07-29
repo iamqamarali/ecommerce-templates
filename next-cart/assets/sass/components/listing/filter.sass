@@ -1,0 +1,60 @@
+$options-item-padding-x: 20px
+$filter-option-hover: lighten($gray, 7%)
+
+.filter-wrapper
+    font-size: .9em
+    border-bottom: 1px solid $gray
+
+.filter
+
+.filter-wrapper
+    .filter-title
+        cursor: pointer
+        text-transform: uppercase
+        padding: 15px $options-item-padding-x
+    .filter-options
+        list-style-type: none
+        padding: 0
+    .filter-option-item
+        position: relative
+    .filter-option
+        display: block        
+        padding: 10px $options-item-padding-x
+        &:hover
+            background-color: $filter-option-hover
+        .filter-option-products-count
+            color: $gray-darker
+            margin-left: 5px
+    .filter-option-change
+        position: absolute
+        top: 50%
+        right: $options-item-padding-x
+        transform: translateY(-50%)
+        font-weight: 600
+        text-decoration: underline
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-size: .85em
+    .filter-option-multiple
+        padding: 6px $options-item-padding-x
+
+
+
+/*------ multiple + grid layout --------*/
+.filter-options.filter-options-grid
+    padding: 0 15px
+    .filter-option-item
+        display: inline-block        
+    .filter-option-multiple
+        font-size: .86em
+        border: 1px solid $gray
+        text-align: center
+        padding: 10px 10px
+        width: 112px
+        margin: 3px
+        &:hover
+            background-color: transparent
+            border-bottom-color: $black
+    .filter-option-item-selected
+        .filter-option-multiple
+            border-color: $black

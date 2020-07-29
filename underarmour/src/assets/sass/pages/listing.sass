@@ -1,0 +1,35 @@
+@import '../components/listing-page/listing-header.sass'
+@import '../components/listing-page/filters.sass'
+@import '../components/listing-page/listing-product.sass'
+
+
+.listing-page
+    max-width: 1300px
+    margin: 0 auto
+    .relevance
+        display: inline-block
+        .dropdown
+            width: 100%
+    .products-wrapper
+        padding: 10px
+        .static-img
+            height: 100%
+        .row
+            [class^="col-"]
+                padding-left: 10px
+                padding-right: 10px
+                margin-bottom: 40px
+
+
+@include media-breakpoint-up(xs)
+    .listing-page
+        .products-wrapper
+            .static-img
+                min-height: 250px
+
+@include media-breakpoint-up(sm)
+    .listing-page
+        .products-wrapper
+            .static-img
+                min-height: 350px
+

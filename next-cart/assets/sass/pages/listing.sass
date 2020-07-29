@@ -1,0 +1,108 @@
+$listing-page-border-color: $gray
+    
+@import '../components/listing/filter'
+@import '../components/listing/listing-product'
+@import '../components/listing/product-services'
+
+.listing-page
+
+.listing-page-header
+
+.listing-page-title
+    display: inline-block
+    margin-top: 10px //changed here from 15px
+
+    
+
+
+.listing-page-products-count
+    margin-left: 20px
+    font-size: .8em
+
+
+
+.listing-page-filters-wrapper
+.listing-page-filters
+    border: 1px solid $listing-page-border-color
+
+.listing-page-filters-title
+    padding: 10px 15px
+    font-weight: 500
+    font-size: 1.2em
+    text-transform: uppercase
+    border-bottom: 1px solid $listing-page-border-color
+    .listing-page-filters-close-icon
+        margin-top: -5px
+        float: right
+        font-weight: lighter
+        font-size: 30px
+        line-height: 1em
+        cursor: pointer
+
+        
+.listing-page-filters-column
+    flex-basis: 300px
+
+.listing-page-filters-buttons-container
+    margin-top: -10px
+    margin-bottom: 20px
+    float: right
+    display: flex
+    >* 
+        flex: 0 0 50%
+    &.fixed-top
+        position: static
+    .listing-page-sort-dropdown
+        min-width: 220px
+
+.listing-page-tags
+    margin-bottom: 10px
+
+
+.listing-page-products-wrapper
+    padding-bottom: 40px
+
+@include media-breakpoint-down(md)
+    .listing-page-filters-buttons-container
+        width: 100%
+        margin-top: 10px
+        margin-bottom: 25px
+        float: none
+        display: flex
+        .listing-page-filters-btn
+            border-color: $gray
+            text-align: left
+            &:hover
+                color: $black
+        .listing-page-sort-dropdown
+            min-width: 0
+    .listing-page-filters-buttons-wrapper.is-fixed
+    .listing-page-filters-buttons-container.fixed-top
+        position: fixed
+        margin-top: 79px //changes done here from 0 px
+        z-index: 1000
+    /* filters */
+    .listing-page-filters-wrapper
+        display: none
+        background-color: $white
+        z-index: 1010
+        position: fixed
+        top: 84px
+        left: 0
+        bottom: 0
+        right: 0
+        width: 100%
+        overflow: auto
+    .listing-page-filters-wrapper.show
+        display: block
+
+
+@include media-breakpoint-down(sm)
+
+
+@media only screen and (max-width: 700px)
+  .listing-page-products-wrapper
+    padding-bottom: 40px
+    .card
+      max-height: 267px
+    

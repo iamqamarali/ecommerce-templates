@@ -1,0 +1,118 @@
+$slider-info-z-index: 50
+$category-shop-nav: 100
+
+.category-shop
+
+
+.category-slider-wrapper
+    position: relative
+
+
+.category-slider
+
+.category-slider-item
+    position: relative
+.category-slider-item-image
+    max-width: 100%
+
+.category-slider-info
+    position: absolute
+    top: 50%
+    right: 5%
+    transform: translateY(-50%)
+    text-align: center
+    &.white
+        color: white
+    .category-slider-info-subtitle
+        font-size: 1.7em
+        text-transform: uppercase
+        font-weight: 500
+        margin-bottom: 10px 
+    .category-slider-info-title
+        font-size: 2.8em
+        text-transform: uppercase
+        font-weight: 900
+        line-height: .9em
+        margin-bottom: 15px 
+    .category-slider-info-description
+        max-width: 80%
+        margin: 0 auto
+        margin-bottom: 15px
+        font-weight: 500
+
+
+.category-shop-nav-container
+    position: absolute
+    z-index: $category-shop-nav
+    top: 30px
+    left: 30px
+    background-color: white
+    font-size: .9em
+    padding: 20px
+    min-width: 210px
+    .category-shop-title
+        text-transform: uppercase
+        font-weight: 800
+    .category-shop-nav
+        .nav-link
+            font-size: .8em
+            padding: 3px 10px
+            color: darken($color-light , 40%)
+            &:hover
+                color: darken($color-light , 10%)    
+        .nav-link.active
+            background-color: #f2f2f2
+            color: $dark
+            font-weight: 900
+            text-transform: uppercase
+
+
+
+
+
+@include media-breakpoint-down(lg)
+    .category-slider-info
+        right: 2%
+        .category-slider-info-subtitle
+            font-size: 1.2em
+        .category-slider-info-title
+            font-size: 2.3em
+        .category-slider-info-description
+            font-size: .9em
+
+@include media-breakpoint-down(md)
+    .tns-nav
+        display: none
+    .category-slider-info
+        position: static
+        transform: none
+        padding: 50px 15px
+        &.white
+            color: inherit
+        .category-slider-info-subtitle
+            font-size: 1.2em
+        .category-slider-info-title
+            font-size: 1.8em
+        .category-slider-info-description
+            max-width: 100%
+        .category-slider-shop-btn
+            border: 2px solid $black
+    // shop nav
+    .category-shop-nav-container
+        position: static
+        padding: 0px
+        .category-shop-title
+            display: none
+        .category-shop-nav
+            .nav-link
+                text-align: center
+                font-size: .9em
+                padding: 15px
+                background-color: #f2f2f2
+                color: darken($color-light , 40%)
+                border-bottom: 1px solid #bbb
+                &:hover
+                    color: darken($color-light , 10%)    
+            .nav-link.active
+                border-bottom: 1px solid #666
+

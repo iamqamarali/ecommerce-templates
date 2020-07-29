@@ -1,0 +1,35 @@
+
+
+.top-banner
+    background-position: center center
+    background-size: cover
+    position: relative
+    min-height: 645px
+    overflow: hidden
+    .overlay        
+        background-color: transparent
+        .content
+            height: 100%
+            .brand-img
+                width: 47%
+            .cto-message
+                text-align: center
+                color: white
+                font-size: 1.3em
+
+@include media-breakpoint-down(lg)
+    .top-banner
+        min-height: 540px
+
+@include media-breakpoint-down(md)
+    .top-banner
+        min-height: 430px
+
+
+@include media-breakpoint-down(sm)
+    .top-banner
+        min-height: 320px
+
+@include media-breakpoint-down(xs)
+    .top-banner
+        min-height: 250px

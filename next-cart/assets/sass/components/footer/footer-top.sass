@@ -1,0 +1,29 @@
+
+.footer-top
+    background-color: $black
+    color: $light
+
+.footer-top-content
+    padding: 10px 0
+    display: flex
+    align-items: center
+    > *
+        flex-grow: 0
+        margin: 15px 10px
+    .signup-title
+        flex-shrink: 0
+    .signup-form
+        flex-shrink: 1
+    .message
+        flex-shrink: 2
+        font-size: $font-sm
+        font-weight: 300
+        color: $lighter
+
+
+@include media-breakpoint-down(sm)
+    .footer-top-content
+        display: block
+        .signup-title
+        .signup-form
+        .message

@@ -1,0 +1,148 @@
+$main-nav-link-padding: 15px 5px
+$navbar-end-nav-link-md-padding: 17px 20px
+
+$main-navbar-small-border: 1px solid $gray-700
+$nav-item-divider-border: 1px solid $gray-700
+
+.header-bottom
+    position: relative
+    z-index: $main-navbar-z-index
+
+.main-navbar
+    background-color: $secondry
+    padding: 0
+    position: static
+    z-index: $main-navbar-z-index
+    .navbar-toggler
+        z-index: 100000
+        min-width: 65px
+        padding: $navbar-end-nav-link-md-padding
+        border-right: $main-navbar-small-border
+        &:focus
+            outline: 0
+    .navbar-brand
+        margin-top: -35px
+    .navbar-logo
+        min-width: 70px
+    .navbar-nav
+        .nav-item-divider
+            margin: 13px 5px
+            border-right: $nav-item-divider-border
+        .nav-link
+            color: $primary
+            padding: $main-nav-link-padding
+            text-transform: uppercase
+            font-weight: 500
+            font-size: .9em
+            &:hover,
+            &.active
+                color: $black
+                background-color: $white
+
+/* navbar-end */
+.main-navbar
+    .navbar-end
+        .form-search
+            margin-right: 10px
+            .input-group
+                .input-group-text    
+                    border: 0
+                .form-control
+                    font-size: .9em
+                    width: 100px
+                    border: 0
+                    &:focus
+                        width: 200px
+        .nav-link
+            color: white
+            padding: 0px 8px
+            font-weight: 900
+            &.active
+                color: $black
+                background-color: $white
+            .fi
+                font-size: 1.2em
+
+
+@include media-breakpoint-down(xs)
+
+@include media-breakpoint-down(sm)
+@include media-breakpoint-down(md)
+    .header-bottom
+        .navbar-brand
+            margin-top: 0px
+        .navbar-logo
+            min-width: 50px
+        .navbar-end
+            .form-search
+                position: absolute
+                top: 100%
+                left: 0
+                right: 0
+                z-index: $main-navbar-z-index
+                display: none
+                background-color: $primary
+                margin: 0
+                padding: 10px
+            .form-search.open
+                display: block
+            .nav-link
+                padding: $navbar-end-nav-link-md-padding
+                border-left: $main-navbar-small-border
+                .fi
+                    font-size: 1em
+    /*----- main-navbar-sidebar ------*/
+    .header-bottom           
+        .main-navbar-sidebar.show
+            left: 0%
+        .main-navbar-sidebar
+            position: absolute
+            z-index: $main-sidebar-z-index
+            top: 100%
+            left: -100%
+            height: calc(100vh -  58px)
+            width: 100%
+            overflow-y: auto
+            display: block
+            border-top: $main-navbar-small-border
+            background-color: $secondry
+            transition: all .5s
+            .navbar-nav
+                padding: 15px 0
+                display: block
+                text-align: center
+                .nav-item-divider
+                    margin: 13px 15px
+                    border-right: 0
+                    border-bottom: $nav-item-divider-border                    
+                .nav-link
+                    font-size: 1.5em
+                    font-weight: 600
+                    padding: 10px 25px 10px 15px
+                    position: relative
+                    &:hover,
+                    &:focus
+                        color: $primary
+                        background-color: $secondry
+                    .fi
+                        position: absolute
+                        top: 50%
+                        padding: 5px 15px
+                        right: 0
+                        margin-top: -17px
+                        font-size: 15px
+                        font-weight: 400
+            .mobile-account-nav 
+                background-color: $gray-800
+                text-align: center
+                padding: 20px 0 
+                li>a
+                    display: block
+                    padding: 10px 15px
+                    color: $primary
+                    font-size: 15px
+                    font-weight: 600
+
+
+
+@include media-breakpoint-down(lg)

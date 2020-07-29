@@ -1,0 +1,103 @@
+
+a.product
+    display: block
+    text-decoration: none
+
+a.listing-product
+.product-card
+    margin: 3px
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.08)
+.product-card
+    border: 1px solid #dcdcdc
+    &:hover
+        border: 1px solid #dcdcdc
+
+.product-imgs-wrapper
+    position: relative
+    .heart-icon
+        position: absolute
+        top: 7px
+        right: 10px
+        z-index: 50
+        font-weight: 800
+    .product-label
+        position: absolute
+        z-index: 20
+        top: -5px
+        right: calc( 100% - 20px)
+        text-transform: uppercase
+        letter-spacing: 2px
+        background-color: $white
+        padding: 2px 10px
+        font-size: $font-md
+        transform: rotateZ(-90deg)
+        transform-origin: 100%
+    &:hover
+        .product-img-back
+            z-index: 10
+
+.product-img-front
+    position: relative
+    z-index: 5
+.product-img-back
+    position: absolute
+    z-index: 0
+    left: 0
+    bottom: 0
+    right: 0
+    top: 0
+
+    
+.listing-product:hover
+    .product-imgs-icons-wrapper
+        display: block
+        
+
+.product-imgs-icons-wrapper
+    background-color: #eceef0
+    margin-top: 2px
+    padding: 0 15px
+    display: none
+    white-space: nowrap
+    overflow-x: auto
+    .product-img-icon
+        max-width: 50px
+        border-bottom: 2px solid transparent
+    .product-img-icon.selected
+        border-bottom: 2px solid $dark
+
+
+.product-card-body
+    color: $black
+    padding-top: 10px
+
+.product-category,
+.product-colors-count
+    color: $gray-darker
+    font-size: $font-sm
+    margin-bottom: 10px
+    
+.product-title,
+.product-price
+    text-transform: uppercase
+    font-size: $font-md
+    letter-spacing: .3px
+.product-title
+    font-size: 11px
+.product-price
+    margin-bottom: 20px
+    font-weight: 500
+
+.rating-review-container
+    color: $gray-darker
+    .rating-stars-nav
+        font-size: .6em
+        display: inline-flex
+        vertical-align: middle
+        .nav-item 
+            margin-right: 2px
+    .review-count
+        margin-left: 5px
+        font-size: $font-sm
+        vertical-align: middle
+    

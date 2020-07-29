@@ -1,0 +1,26 @@
+@import './header-top'
+@import './header-bottom'
+@import './header-dropdown-menu'
+@import './header-message-bar'
+
+
+.site-header-wrapper.is-fixed
+    padding-top: 86px
+
+.site-header-wrapper.is-fixed.has-message-bar
+    padding-top: 120px
+
+@include media-breakpoint-down(xs)
+
+@include media-breakpoint-down(sm)
+@include media-breakpoint-down(md)
+    .site-header-wrapper.is-fixed
+        padding-top: 59px
+    .site-header-wrapper.is-fixed.has-message-bar
+        padding-top: 84px
+    .site-header-wrapper.is-fixed.is-fixed-md
+        padding-top: 0px
+        .site-header.fixed-top
+            position: relative
+        
+@include media-breakpoint-down(lg)

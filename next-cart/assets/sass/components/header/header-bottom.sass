@@ -1,0 +1,62 @@
+.header-bottom
+    border-bottom: 1px solid $gray
+    background-color: $header-bottom-background-color
+    position: relative
+    .mobile-buttons-container
+        display: flex
+        padding: 10px
+        margin-top: 10px
+        .btn
+            display: block
+            width: 100%
+            border-color: $gray
+            &:nth-child(2)
+                margin-left: 10px
+.sidebar
+    .sidebar-bottom
+        .info-nav
+            justify-content: center
+            margin-bottom: 25px
+            .nav-item
+                border-right: 1px solid $gray
+                &:last-child
+                    border-right: 0
+            .nav-link
+                padding: 5px 10px
+                margin-bottom: 5px
+
+
+
+@include media-breakpoint-down(md) 
+
+    .header-bottom.sidebar
+        padding-top: 50px
+        border: 0
+        position: fixed
+        z-index: $sidebar-z-index
+        top: 0 
+        bottom: 0
+        left: -100%
+        width: calc(100vw - 30px)
+        height: 100vh
+        overflow-y: auto
+        transition: all .4s ease
+        &.show
+            width: 100vw
+            left: 0
+        .sidebar-close-icon
+            position: absolute
+            top: 0px
+            right: 12px
+            font-size: 35px
+            font-weight: 200
+            cursor: pointer
+        .container-fluid
+            padding: 0
+    
+ 
+    /*-- header-bottom-nav ---*/
+    //.sidebar-nav
+    .header-bottom-nav
+        flex-direction: column
+    

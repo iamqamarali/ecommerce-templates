@@ -1,0 +1,89 @@
+body
+    font-family: 'Poppins'
+    font-weight: 400
+    color: $black
+    font-size: $font-md
+    background-color: $body-background-color
+div
+    font-size: inherit
+
+*
+    box-sizing: border-box
+.remove-scrollbar
+    max-height: 100vh
+    overflow: hidden
+
+.site-logo
+    max-width: 170px
+
+
+a
+    color: inherit
+    &:hover
+        color: $primary
+        text-decoration: none
+
+.site-link
+    color: $primary
+    &:hover
+        color: $primary
+
+.cursor-pointer
+    cursor: pointer
+
+a.underline
+    text-decoration: underline
+a.hover-underline:hover
+    text-decoration: underline
+
+.text-gray
+    color: $gray-darker
+
+.text-gray-darker
+    color: darken($gray-darker, 20%)
+.text-primary-light
+    color: $primary-light!important
+
+    
+h1 , h2 , h3 , h4 , h5
+    color: inherit
+    font-weight: 500
+    margin-bottom: 0
+h1
+    font-size: 2em
+h2
+    font-size: 1.7em
+h3 
+    font-size: 1.5em
+h4
+    font-size: 1.2em    
+h5
+    font-size: 1em
+    font-weight: 500
+
+.fi
+    display: inline-block
+    line-height: 1em
+    vertical-align: middle
+
+.fi:before,
+.fi:after
+    display: block
+    margin-left: 0
+    line-height: 1em
+    font-size: inherit!important
+    vertical-align: middle
+
+.title
+    text-transform: uppercase
+    font-weight: 600
+
+.container-fluid
+    max-width: 1200px
+@include media-breakpoint-down(md)
+
+
+        
+@include media-breakpoint-down(sm)
+        
+@include media-breakpoint-down(lg)

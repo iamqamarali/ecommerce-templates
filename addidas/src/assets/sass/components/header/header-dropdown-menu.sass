@@ -1,0 +1,115 @@
+$dropdown-navlink-active-background-color: $gray-100
+
+
+// display styling
+.main-navbar 
+    .navbar-nav
+        .nav-item
+            position: static
+        .dropdown-menu
+            box-shadow: 0 10px 50px rgba(0,0,0, .2)
+            position: absolute
+            right: 0
+            top: 100%
+            left: 0
+            border: 0
+            margin: 0            
+        .nav-item:hover
+            .dropdown-menu
+                display: block
+
+// dropdown styling
+.main-navbar
+    .navbar-nav
+        .dropdown-menu
+            max-height: 470px
+            padding: 20px 25px
+            overflow-y: auto
+        .subcategory-headline
+            font-weight: bold
+            text-transform: uppercase
+            margin-bottom: 15px
+        .subcategory-dropdown-content
+            .subcategory-img
+                max-width: 100%
+                margin-bottom: 20px
+            .subcategory-nav
+                margin: 0
+                padding: 0
+                list-style-type: none
+                font-size: .76em
+                color: $dark
+                li
+                    a
+                        margin-bottom: 7px
+                        display: block 
+                        &:hover
+                            text-decoration: underline
+                li.subcategory-divider
+                    margin: 35px 0 10px 0 
+                    width: 20px
+                    border-bottom: 1px solid $gray-100
+
+// on small size dropdown
+@include media-breakpoint-down(xs) 
+
+@include media-breakpoint-down(sm)
+@include media-breakpoint-down(md)
+    .main-navbar
+        .navbar-nav
+            .dropdown:hover
+                .dropdown-menu
+                    display: none
+            .dropdown-menu
+                position: static
+                display: none
+            .dropdown.open
+                >.nav-link
+                    background-color: $dropdown-navlink-active-background-color
+                    color: $secondry
+                .dropdown-menu
+                    padding: 0
+                    display: block
+                    border-radius: 0
+                    .row
+                        margin: 0
+                    .col-lg
+                        padding: 0
+                        margin: 0
+                    .subcategory-mobile-dropdown
+                    .subcategory-headline
+                        font-weight: 500
+                        padding: 15px 25px
+                        margin: 0
+                        border-bottom: 1px solid darken($light , 10%)
+                        cursor: pointer
+                        position: relative
+                        .fi
+                            position: absolute
+                            top: 50%
+                            padding: 5px 15px
+                            right: 0
+                            margin-top: -17px
+                            font-size: 15px
+                            font-weight: 400
+                    .subcategory-dropdown-content
+                        display: none
+                    .subcategory-img-container
+                        display: none
+                    .subcategory-nav
+                        font-size: .9em
+                        li a
+                            display: block
+                            padding: 12px 35px
+                            border-bottom: 1px solid darken($light , 10%)
+                            text-transform: uppercase
+                        li.subcategory-divider
+                            display: none
+                        
+                    .subcategory-mobile-dropdown.active
+                        .subcategory-headline
+                            background-color: $dropdown-navlink-active-background-color
+                        .subcategory-dropdown-content
+                            display: block
+
+                            

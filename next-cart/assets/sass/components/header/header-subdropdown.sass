@@ -1,0 +1,44 @@
+
+.header-subdropdown
+    padding-left: 20px
+    .subdropdown-headline
+        font-weight: 500
+        text-transform: uppercase
+        padding-bottom: 5px
+        margin-bottom: 20px
+        border-bottom: 1px solid $gray
+        font-size: $font-md
+    .subdropdown-menu-container
+    .subdropdown-menu
+        li a
+            display: block
+            color: $gray-darker
+            font-weight: 300
+            margin-bottom: 5px
+            font-size: $font-md
+            &:hover
+                color: $primary    
+
+@include media-breakpoint-down(md)     
+    .header-subdropdown
+        padding-left: 0px
+        .subdropdown-headline
+            border: 0
+            padding: $header-mobile-subdropdown-padding
+            border-bottom: $header-mobile-dropdown-border
+            margin: 0
+            cursor: pointer
+            background-color: $light
+            &:hover
+                color: $primary
+        .subdropdown-menu
+            display: none
+            background-color: transparwent
+            li a
+                color: $black
+                padding: $header-mobile-subdropdown-menu-links-padding
+                border-bottom: $header-mobile-dropdown-border
+    
+    .header-subdropdown.open
+        .subdropdown-menu
+            display: block

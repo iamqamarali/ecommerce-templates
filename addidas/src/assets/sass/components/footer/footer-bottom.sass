@@ -1,0 +1,18 @@
+.footer-bottom
+    background-color: $footer-bottom-background-color
+    color: $gray-100
+    padding: 20px 0
+    font-size: .7em
+.footer-bottom-nav-container
+    display: flex
+    justify-content: flex-end
+.footer-bottom-nav
+    a
+        padding: 0 20px
+        border-left: 1px solid $gray-100
+.footer-bottom-copyrights
+
+@include media-breakpoint-down(md) 
+    .footer-bottom
+    .footer-bottom-nav-container
+        justify-content: center

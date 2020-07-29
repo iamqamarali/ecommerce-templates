@@ -1,0 +1,123 @@
+
+
+@import '../components/checkout/summary-line'
+@import '../components/checkout/proceed-checkout'
+@import '../components/checkout/credits-and-coupons'
+@import '../components/checkout/checkout-bag-product'
+
+
+a.checkout-link,
+.checkout-link
+    color: $info
+
+.checkout-container
+    max-width: 1170px
+    margin: 0 auto
+    padding: 0 15px
+
+.checkout-left-column
+    padding-right: 25px
+    margin-bottom: 20px
+    border-right: 1px solid $gray
+.checkout-right-column
+    margin-bottom: 20px
+    padding-left: 25px
+
+.checkout-heading
+    padding-bottom: 10px
+    border-bottom: 1px solid $lighter
+ 
+
+// address page
+.checkout-address-card
+    cursor: pointer
+    background-color: $light
+    margin-bottom: 30px
+
+.add-address-from
+    .form-check-label
+        font-weight: bolder   
+
+
+// payments page
+
+.payment-methods
+
+.payment-method
+
+.payment-method-card
+    border-radius: 0
+    .card-header
+        background-color: transparent
+        cursor: pointer
+        padding: 15px
+    .card-header.collapsed
+        border-bottom: 0
+    .card-title
+        margin: 0
+        font-weight: 600
+        input 
+            margin-right: 10px
+    .card-body
+
+.payment-method-options
+    max-width: 500px
+    margin: 0 auto
+    &:after
+        content: ""
+        display: block
+        clear: both
+    .payment-method-option
+        height: 60px
+        width: calc(50% - 10px)
+        border: 1px solid $gray
+        padding: 10px
+        float: left
+        margin: 5px
+        text-align: center
+        cursor: pointer
+        &.selected
+            border-color: $success
+    .payment-method-option-img
+        max-height: 100%
+        max-width: 100%
+
+// success
+
+.checkout-success
+    background-color: $light
+    .success-message-container
+        background-color: white
+        padding: 40px 20px
+    .share-icons-nav
+        .nav-link
+            padding: 7px
+            margin: 0 5px
+            border-radius: 50%
+            line-height: 1em
+            font-size: $font-md-normal
+            color: $gray-darker
+            border: 1px solid $gray-darker
+            &:hover
+                border-color: $primary
+                color: $primary
+
+    // summary
+    .success-summary-container
+    .success-summary-card
+        border: 0
+        .card-header
+            background-color: transparent
+        .card-title
+            margin-top: 20px
+            margin-bottom: 0
+        .summary-products
+        .summary-product
+            display: flex
+            border-bottom: 1px solid $lighter
+            .summary-product-img-container
+                max-width: 90px
+                margin-right: 20px
+            .summary-product-detail
+                padding: 10px 0
+

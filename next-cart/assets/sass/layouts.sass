@@ -1,0 +1,101 @@
+
+//account-layout
+.account-layout
+    .logo-wrapper
+        text-align: center
+        display: block
+    .site-logo
+
+
+
+// User Layout
+.user-layout
+    .main-content
+        background-color: $light
+        padding: 20px 0
+    .user-layout-left
+        background-color: white
+
+        // left menu
+        .left-menu
+            padding: 0
+            list-style-type: none
+            .menu-item
+                padding: 15px 20px
+                border-bottom: 1px solid $gray
+                &:last-child
+                    border-bottom: 0
+                .menu-item-heading
+                    display: block
+                    padding: 5px 0
+                    .fi
+                        font-size: $font-lg
+                        margin-right: 5px
+                        color: $primary
+                .submenu
+                    padding: 0
+                    margin-left: 30px
+                    color: $gray-darker
+                    .submenu-item
+                        display: block
+                        a
+                            display: block
+                            padding: 5px 0
+                        a.active
+                            color: $primary
+
+            .menu-item.order-track
+                background-color: $light-red
+                border-bottom: 0
+                .menu-item-heading
+                    margin-bottom: 10px
+
+
+    .user-layout-right
+        background-color: white
+        position: relative
+        .left-menu-toggler
+            position: absolute
+            top: 13px
+            right: 15px
+
+    // user panel used in pages
+    .user-panel
+    .user-panel-header
+        padding: 15px 20px
+        border-bottom: 1px solid $gray
+    .user-panel-heading
+        font-weight: 400
+    .user-panel-content
+        padding: 20px
+    .user-panel-footer
+        padding: 25px 20px
+
+
+
+
+
+@include media-breakpoint-down(md)
+    .user-layout
+        .user-layout-left
+            display: none
+            position: fixed
+            top: 80px
+            right: 0%
+            left: 0%
+            bottom: 0
+            z-index: 1050
+            background-color: rgba(0,0,0,.8)
+            transition: all .5s ease
+            .left-menu
+                height: 100%
+                overflow-y: auto
+                margin-left: 100px
+                background-color: white
+        .user-layout-left.show
+            display: block
+
+
+@include media-breakpoint-down(sm)
+
+@include media-breakpoint-down(lg)

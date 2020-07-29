@@ -1,0 +1,64 @@
+
+.you-may-also-like
+    padding: 30px 0 50px
+    
+.you-may-also-like-nav
+    margin-bottom: 15px
+    flex-wrap: nowrap
+    overflow-x: auto
+    .nav-item
+    .nav-link        
+        font-size: $font-sm
+        font-weight: 600
+        padding: 10px 5px
+        margin: 0 5px
+        &.active
+            border-bottom: 2px solid $black
+
+.you-may-also-like-nav.is-fixed-top
+    position: fixed
+    z-index: 1000
+    top: 80px //changed here from 97px
+    left: 0
+    right: 0
+    padding: 5px 15px 5px
+    background-color: $white
+    border-bottom: 1px solid $lighter
+.you-may-also-like-product.card.product-card
+    margin: 2px
+.you-may-also-like-products
+@media only screen and  (max-width:  1000px)
+    .you-may-also-like-product
+        min-height: 170px !important
+
+.you-may-also-like-product
+    padding: 0 2px
+    margin-bottom: 5px
+    min-height: 206px
+    .product-img-container
+    .product-img
+
+    .product-detail-container
+        padding: 5px 5px
+        .product-price
+            font-size: $font-sm
+            font-weight: 500
+        .product-heart-icon
+            float: right
+            margin-top: 0px //changed here from 3px
+            font-size: $font-md-normal
+        .price-box
+            float: left
+            font-size: 11px
+        .product-original-price,.product-price-now
+            display: block
+    .product-img-container
+        .product-heart-icon 
+            float: right
+            margin-top: 4px
+            margin-right: 3px
+
+.hidden_block
+    display: none
+.show_block
+    display: block

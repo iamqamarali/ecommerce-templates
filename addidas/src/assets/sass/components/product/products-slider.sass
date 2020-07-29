@@ -1,0 +1,48 @@
+
+
+.products-slider-wrapper
+    .tns-outer
+        position: relative
+        margin-top: 20px
+        margin-bottom: 50px
+    .tns-controls
+        button
+            position: absolute
+            z-index: 100
+            top: 37%
+            background-color: $primary
+            border: 0
+            box-shadow: 0
+            font-size: 23px
+            padding: 0px 10px
+            color: $secondry
+            transition: all .3s
+            &:hover
+                background-color: $secondry
+                color: $primary
+            &[disabled]
+                display: none
+        button[data-controls="prev"]
+            left: 1px
+        button[data-controls="next"]
+            right: 1px
+    .tns-nav
+        position: absolute
+        bottom: -30px
+        left: 50%
+        transform: translateX(-50%)
+        button
+            background-color: $secondry
+            border: 0
+            box-shadow: none
+            height: 1px
+            width: 20px
+            padding: 0
+            margin: 3px 0
+            margin-right: 4px
+            &.tns-nav-active,
+            &:hover
+                height: 3px
+
+.product-slider
+

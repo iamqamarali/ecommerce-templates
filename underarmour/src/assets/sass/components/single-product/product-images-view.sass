@@ -1,0 +1,41 @@
+$product-image-item-width: 100px
+$product-current-image-background-color:  #f2f2f2
+.product-images-wrapper
+    position: relative
+
+.product-images
+
+.product-current-image-container
+    margin-bottom: 20px
+    overflow: hidden
+    text-align: center
+    background-color: $product-current-image-background-color
+.product-current-image
+    max-width: 100%
+    max-height: 100%
+
+
+// slider
+.product-images-items-container
+    display: flex
+    overflow-x: auto
+
+.product-images-item
+    flex-shrink: 0
+    flex-basis: $product-image-item-width
+    margin-right: 5px
+    margin-bottom: 5px
+    border: 2px solid transparent
+    &.current
+        border: 2px solid $dark
+    .product-image
+        max-width: 100%
+
+
+@include media-breakpoint-down(md)
+    .product-current-image-container
+        height: 370px    
+
+@include media-breakpoint-down(sm)
+    .product-current-image-container
+        height: 300px    

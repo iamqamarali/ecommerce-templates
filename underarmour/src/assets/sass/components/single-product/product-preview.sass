@@ -1,0 +1,162 @@
+$small-font-size: .75em 
+$medium-font-size: .9em
+
+$product-description-color: #333
+
+$add-to-bag-btn-background-color: $product-page-red-color
+
+
+.product-preview
+
+.product-images-column
+    padding: 0
+.product-detail-column
+    background-color: white
+.product-images-container
+    position: relative
+    .like-btn
+        position: absolute
+        right: 10px
+        top: 10px
+        z-index: 2000
+        .icon
+            width: 25px
+            height: 25px
+
+.product-detail
+    padding: 50px 25px
+    position: relative
+    .product-speciality
+        background-color: #999
+        color: white
+        padding: 5px 10px
+        position: absolute
+        top: 0
+        left: 0 
+        font-size: .8em
+        font-weight: 300
+        text-transform: uppercase
+    .product-title
+        font-size: 1.4em
+        letter-spacing: -1px
+        margin: 0 0 -4px
+    .product-category
+        font-size: $small-font-size
+        margin-bottom: 10px
+    .product-rating-and-style
+        .rating
+            .flaticon:before
+                font-size: 13px
+    .product-style
+        color: #999
+        font-size: $small-font-size
+    .product-price
+        font-size: $medium-font-size
+        font-weight: 500
+        margin-bottom: 30px
+    .product-original-price
+        text-decoration: line-through
+        color: #777
+    .product-color-wrapper
+        font-size: $small-font-size
+        margin-bottom: 10px
+    .product-color-title
+    .product-color-selected-name
+    .product-color-images-wrapper
+        margin-bottom: 30px
+    .product-color-image-item
+        margin-right: 5px
+        &.selected
+            .product-color-image
+                border-color: $dark
+    .product-color-image
+        max-width: 45px
+        border: 2px solid $color-light
+    .product-size-wrapper
+        font-size: $small-font-size
+        margin-bottom: 10px
+        .size-chart-link
+            text-decoration: underline
+    .product-size-title
+    .product-size-selected-name
+    .product-sizes
+    .product-size
+        background-color: transparent
+        border: 1px solid $light-border-color
+        width: 55px
+        height: 35px
+        margin-right: 7px
+        margin-bottom: 10px
+        font-size: $small-font-size
+        &.selected
+            border-color: $dark
+        &:focus, &:hover
+            outline: 0
+
+    // product-quantity btn
+    .product-quantity
+        position: relative
+        display: inline-block
+        &:after
+            content: ""
+            display: block
+            position: absolute
+            right: 15px
+            top: 50%
+            width: 10px
+            height: 10px
+            border: 1.5px solid $dark
+            border-top: 0
+            border-left: 0
+            transform: translateY(-50%) rotate(45deg)
+        .product-quantity-title
+            display: block
+            font-size: .7em
+            position: absolute
+            top: 6px
+            padding: 0px 10px
+        .product-quantity-border
+            position: absolute
+            top: 0
+            right: 0
+            left: 0
+            bottom: 0
+            border: 1px solid $dark
+            z-index: 5
+        .form-control
+            font-size: $small-font-size
+            border: 0
+            display: inline-block
+            padding: 0 
+            width: auto
+            appearance: none
+            position: relative
+            z-index: 10
+            background-color: transparent
+            min-width: 100px
+            height: 75px
+            margin-bottom: -20px
+            padding: 0px 15px 
+            &:focus
+                &+.product-quantity-border
+                    border-width: 2px
+    .product-add-to-bag-btn
+        color: white
+        background-color: $add-to-bag-btn-background-color
+        height: 55px
+        margin-top: -20px
+        font-weight: 400
+        &:hover
+            background-color: $black
+
+
+
+
+
+
+
+
+@include media-breakpoint-down(md)
+    .product-wrapper.in-modal
+        .product-detail
+            padding: 40px 20px

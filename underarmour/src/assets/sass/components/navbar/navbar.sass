@@ -1,0 +1,81 @@
+    
+$main-navbar-color: white
+$main-navbar-font-size: 15px
+$dropdown-font-size: 13px
+$dropdown-link-hover-color: #999
+$transition: all .5s ease-in-out
+$navbar-border-color: #ddd
+
+$fixed-navbar-top-size: 86px
+    
+@import './message-nav.sass'
+@import './nav-links.sass'
+@import './search-icon-nav.sass'
+
+#navbar
+    .fixed-top
+        position: static
+    .fixed-top.active
+        position: fixed  
+.padding-for-fixed-nav
+    padding-top: 100px
+
+@include media-breakpoint-down(sm)
+    .padding-for-fixed-nav
+        padding-top: $fixed-navbar-top-size
+    #navbar
+        padding-top: $fixed-navbar-top-size
+        .fixed-top
+            position: fixed
+
+
+/*---- sidebar -----*/
+ 
+.navbar-wrapper
+    z-index: $navbar-wrapper-z-index
+    position: relative
+
+.main-navbar
+    background-color: $main-navbar-color
+    border-bottom: 1px solid $navbar-border-color
+    position: static
+    padding-top: 0
+    padding-bottom: 0
+    .navbar-brand 
+        padding: 15px 0
+        padding-right: 90px
+            
+    .navbar-toggler
+        border: 0
+        width: 25px
+        padding: 0
+        &:focus
+            outline: 0
+        .icon-bar
+            display: block
+            height: 3px
+            margin-bottom: 5px
+            background-color: $dark
+ 
+
+@include media-breakpoint-down(lg)
+    .main-navbar
+        .navbar-brand
+            padding-right: 50px
+           
+
+@include media-breakpoint-down(md)
+    .main-navbar
+        .navbar-brand
+            padding-right: 0px
+
+@include media-breakpoint-down(sm)
+    .main-navbar
+        .navbar-brand
+            margin-left: 60px
+                 
+                    
+
+@include media-breakpoint-down(xs)
+
+

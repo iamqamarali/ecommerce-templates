@@ -1,0 +1,88 @@
+$header-dropdown-nav-link-z-index: 100
+$header-dropdown-menu-z-index: 90
+
+
+.header-dropdown
+    position: static
+    .nav-link
+        text-transform: uppercase
+        font-weight: 400
+        border: 1px solid transparent
+
+
+/*------- Show on hover effect --------*/
+.header-dropdown:hover
+    .nav-link
+        color: $primary
+        border: 1px solid $gray
+        border-bottom-color: $header-bottom-background-color
+        background-color: $header-bottom-background-color
+        position: relative
+        z-index: $header-dropdown-nav-link-z-index
+    .header-dropdown-menu
+        display: block
+
+/*----- header dropdown menu stylings -----*/
+.header-dropdown-menu
+    position: absolute
+    right: 40px
+    left: 40px
+    top: 100%
+    margin: 0
+    margin-top: -1px
+    padding: 0
+    border: 0
+    border-radius: 0 
+    border: 1px solid $gray
+    z-index: $header-dropdown-menu-z-index
+    .dropdown-menu-container
+        padding: 20px 15px
+        padding-bottom: 30px
+    .dropdown-menu-other-options-container
+        .other-option
+            display: inline-block
+            width: 50%
+            padding: 15px
+            text-align: center
+        .other-option-img
+            display: inline-block
+            width: 80px
+            height: 80px
+            border-radius: 50%
+            margin-bottom: 5px
+        .other-option-text
+            display: inline-block
+            font-size: $font-md
+
+@include media-breakpoint-down(md)  
+    .header-dropdown,
+    .header-dropdown:hover
+        .nav-link
+            border: 0
+            padding: $header-mobile-dropdown-padding
+            border-bottom: $header-mobile-dropdown-border
+            .dropdown-arrow
+                float: right        
+                
+    /*----  dropdown menu   ----*/
+    .header-dropdown-menu
+        width: 100%
+        position: static
+        display: none
+        border: 0
+        margin: 0
+        border-bottom: 1px solid $gray
+        .dropdown-menu-container
+            padding: 0
+            padding-bottom: 0
+        .dropdown-menu-other-options-container
+            display: none
+
+    .header-dropdown
+        &:hover
+            .header-dropdown-menu
+                display: none
+        &.open
+            .header-dropdown-menu
+                display: block
+

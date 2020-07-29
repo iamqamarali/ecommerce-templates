@@ -1,0 +1,33 @@
+.header-top
+    background: linear-gradient( -45deg , lighten($secondry, 20%) , $secondry)
+
+.header-top-nav 
+    font-size: $font-xs
+    text-transform: uppercase
+    font-weight: 600
+    .nav-item
+        color: $gray-100
+    .nav-link
+        padding: 0px 10px
+        margin: 10px 0
+        border-right: 1px solid $gray-100
+    .icon-nav-item
+        .nav-link
+            position: relative
+            padding-right: 30px
+            border-right: 0
+        .fi
+            position: absolute
+            right: 7px
+            top: -2px
+            &:before
+                font-size: 14px
+
+@include media-breakpoint-down(xs)
+
+@include media-breakpoint-down(sm)
+@include media-breakpoint-down(md)
+    .header-top
+        display: none
+        
+@include media-breakpoint-down(lg)

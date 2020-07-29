@@ -1,0 +1,100 @@
+$font-small: .7em
+$font-medium: .8em
+
+a.product
+    display: block
+    text-decoration: none
+
+a.listing-product
+
+.product-card
+    border: 1px solid transparent
+    &:hover
+        border: 1px solid $gray-100
+
+.product-imgs-wrapper
+    position: relative
+    .heart-icon
+        position: absolute
+        top: 5px
+        right: 10px
+        z-index: 50
+        font-weight: 800
+    .product-label
+        position: absolute
+        z-index: 20
+        top: -5px
+        right: calc( 100% - 20px)
+        text-transform: uppercase
+        letter-spacing: 2px
+        background-color: $white
+        padding: 2px 10px
+        font-size: $font-medium
+        transform: rotateZ(-90deg)
+        transform-origin: 100%
+    &:hover
+        .product-img-back
+            z-index: 10
+
+.product-img-front
+    position: relative
+    z-index: 5
+.product-img-back
+    position: absolute
+    z-index: 0
+    left: 0
+    bottom: 0
+    right: 0
+    top: 0
+
+    
+.listing-product:hover
+    .product-imgs-icons-wrapper
+        display: block
+        
+
+.product-imgs-icons-wrapper
+    background-color: #eceef0
+    margin-top: 2px
+    padding: 0 15px
+    display: none
+    white-space: nowrap
+    overflow-x: auto
+    .product-img-icon
+        max-width: 50px
+        border-bottom: 2px solid transparent
+    .product-img-icon.selected
+        border-bottom: 2px solid $dark
+
+
+.product-card-body
+    color: $gray-700
+    padding-top: 10px
+
+.product-category,
+.product-colors-count
+    color: $gray-300
+    font-size: $font-small
+    margin-bottom: 10px
+    
+.product-title,
+.product-price
+    text-transform: uppercase
+    font-size: $font-medium
+    letter-spacing: .3px
+
+.product-price
+    margin-bottom: 20px
+.rating-review-container
+    color: $gray-300
+    .rating-stars-nav
+        font-size: .6em
+        display: inline-flex
+        vertical-align: middle
+        .nav-item 
+            margin-right: 2px
+    .review-count
+        margin-left: 5px
+        font-size: $font-small
+        vertical-align: middle
+    

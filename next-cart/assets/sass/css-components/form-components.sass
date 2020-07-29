@@ -1,0 +1,50 @@
+
+
+
+.form-control
+    border-radius: 0
+    font-size: $font-sm
+    border: 1px solid $gray
+    box-shadow: none
+    background-color: $white
+    height: 40px
+    &:focus
+        border: 1px solid $primary
+        box-shadow: none
+        
+
+
+input.form-control::placeholder
+    color: $gray
+
+
+/*---- input-groups  ----*/
+
+.input-group
+    border-radius: 0
+    .input-group-append,
+    .input-group-prepend
+        .input-group-text
+            border-radius: 0
+            background-color: $white
+            cursor: pointer
+            border-color: $gray
+            transition: all .2s linear
+            
+.input-group.input-group-appended
+    .form-control
+        border-right: 0
+        &:focus
+            + .input-group-append
+                .input-group-text
+                    border: 1px solid $primary
+
+
+// Custom Control
+
+.custom-control
+    .custom-control-input
+    .custom-control-label
+        &:before,
+        &:after
+            top: 1px

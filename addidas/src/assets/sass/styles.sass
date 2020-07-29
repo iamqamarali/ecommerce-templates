@@ -1,0 +1,74 @@
+body
+    font-size: $font-medium
+    font-family: 'Poppins'
+    font-weight: 400
+    color: $black
+.fs-xs
+    font-size: .7em   
+.fs-sm
+    font-size: .85em
+.fs-md
+    font-size: 1.1em
+.fs-lg
+    font-size: 1.4
+
+.container-fluid
+    max-width: 1250px
+
+a
+    color: inherit
+    &:hover
+        color: inherit
+        text-decoration: none
+
+        
+a.underline
+    text-decoration: underline
+a.hover-underline:hover
+    text-decoration: underline
+h1 , h2 , h3
+    margin-bottom: 15px
+h1
+    font-size: 2em
+h2
+    font-size: 1.7em
+h3 
+    font-size: 1.5em
+
+.fi
+    line-height: 1em
+.fi:before,
+.fi:after
+    margin-left: 0
+    font-size: inherit
+    vertical-align: middle
+
+
+.title
+    text-transform: uppercase
+    font-weight: 700
+
+
+.site-link
+    font-size: 13px
+    text-decoration: underline
+    font-weight: 300
+
+@include media-breakpoint-up(lg)
+    .container
+        max-width: 1000px
+
+
+@include media-breakpoint-down(sm)
+    h1
+        font-size: 2em
+    h2
+        font-size: 1.7em
+    h3 
+        font-size: 1.5em
+        
+@include media-breakpoint-down(md)
+
+        
+@include media-breakpoint-down(lg)
+

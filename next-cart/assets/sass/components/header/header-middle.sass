@@ -1,0 +1,108 @@
+
+.header-middle
+    position: relative
+    z-index: $header-middle-z-index
+
+.main-navbar
+    background-color: $header-middle-background-color
+    .navbar-brand
+        padding: 0
+        max-width: $navbar-brand-max-width
+    .navbar-collapse.navbar-search-form-wrapper
+    .navbar-search-form
+        flex: 1
+        margin: 0 4%
+        .input-group
+
+
+.main-navbar-end
+    color: $black
+    font-weight: 300
+    .nav-link
+        font-size: $font-sm        
+    // overall icon nav items
+    .icon-nav-item
+        display: flex
+        align-items: center
+        .nav-link
+            position: relative
+            padding: 0 10px
+            font-size: $font-lg
+            border-left: 1px solid $gray
+            .fi
+                display: block
+            .bag-items-badge
+                font-size: .5em
+    .nav-search-icon
+        .nav-link
+            border-left: 0
+    // user nav item
+    .nav-item-user
+        .nav-link-user
+            vertical-align: middle
+        span.user
+            display: inline-block
+            vertical-align: middle
+    // bag nav item
+    .nav-item-bag
+        .dropdown-menu
+            background-color: $lighter
+            min-width: 300px
+            border-radius: 0
+            font-size: $font-md
+        .bag
+        .bag-header
+            background-color: $lighter
+            padding: 9px 15px 15px
+            font-size: 15px
+        .bag-content
+            background-color: white
+            .bag-items
+                max-height: 120px
+                overflow-y: auto
+                padding: 1px 15px
+            .bag-subtotal
+                background-color: $light
+                padding: 10px 15px
+            .bag-item
+                display: flex
+                margin: 10px 0
+                .bag-item-img-container
+                    width: 80px
+                .bag-item-content
+                    flex: 1
+                    padding-left: 10px
+        .bag-footer
+            .bag-footer-btns
+                display: flex
+                padding: 0 10px
+                .btn
+                    flex: 1
+                    margin: 5px
+
+@include media-breakpoint-down(md)
+    .main-navbar
+        border-bottom: 1px solid $gray
+        .navbar-brand
+            max-width: $navbar-brand-md-max-width
+        .navbar-collapse.navbar-search-form-wrapper
+            display: block
+            position: absolute
+            top: -50%
+            left: 0
+            right: 0
+            z-index: -$header-middle-z-index
+            background-color: $header-middle-background-color
+            padding: 12px
+            transition: all .3s ease
+            &.show
+                top: 100%
+        .navbar-search-form
+            margin: 0
+            
+    /*----  nav end  ----*/
+    .main-navbar-end
+        .icon-nav-item
+            padding: 10px 3px
+            .nav-link
+                font-size: $font-md-large

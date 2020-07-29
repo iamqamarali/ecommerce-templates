@@ -1,0 +1,23 @@
+
+
+
+.tns-outer
+    position: relative
+    .tns-nav
+        position: absolute
+        z-index: 1000
+        bottom: 5%
+        left: 50% 
+        transform: translateX(-50%)
+        button
+            border: 0 
+            background-color: white
+            opacity: .4
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            margin-right: 5px
+            &:focus
+                outline: 0
+        button.tns-nav-active
+            opacity: 1

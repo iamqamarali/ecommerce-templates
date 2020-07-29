@@ -1,0 +1,84 @@
+$dropdown-btn-background-color: white
+$dropdown-background-color: white
+
+$dropdown-select-background-color: $light
+$dropdown-select-hover-background-color: darken($light, 10%)
+$dropdown-btn-font-size: 13px
+$dropdown-menu-font-size: 13px
+$dropdown-border-color: $light-border-color
+
+
+.dropdown
+    display: inline-block
+    position: relative    
+    .btn
+        font-weight: 500
+        position: relative
+        padding: 10px 15px 10px 10px
+        background-color: $dropdown-btn-background-color
+        font-size: $dropdown-btn-font-size
+        border: 1px solid transparent
+        transition: all 0s
+        .arrow
+            margin-left: 8px
+    .dropdown-menu
+        display: none
+        border: 0
+        min-width: 100%
+        margin-top: -1px
+        font-size: $dropdown-menu-font-size
+        border: 1px solid $dropdown-border-color
+        background-color: $dropdown-background-color
+        border-radius: 0
+        z-index: $dropdown-z-index
+
+
+
+/*---- Dropdown hover  ------*/    
+.dropdown 
+    &:hover 
+        .btn
+            z-index: ($dropdown-z-index +100)
+            border: 1px solid $dropdown-border-color
+            border-bottom: 1px solid transparent
+        .dropdown-menu
+            display: block        
+
+    
+    
+/*----- Select Dropdown  -----*/
+.dropdown.dropdown-select
+    .btn
+        display: block
+        background-color: $dropdown-select-background-color
+        width: 100%
+        text-align: left
+        padding: 5px 10px
+        padding-right: 30px
+        text-transform: none        
+        &:after,
+        &:before
+            content: ""
+            display: block
+            position: absolute
+            right: 10px
+            top: 50%
+            border: 3px solid #555
+            border-right-color: transparent
+            border-bottom-color: transparent
+        &:before
+            margin-top: -6px
+            transform: rotate(45deg)
+        &:after
+            margin-top: -1px
+            transform: rotate(-135deg)
+    .dropdown-menu
+        background-color: $dropdown-select-background-color
+        border: 0
+    .dropdown-menu.open
+        display: block
+    .dropdown-item
+        font-weight: 500
+        padding: 5px 10px
+        &:hover
+            background-color: $dropdown-select-hover-background-color

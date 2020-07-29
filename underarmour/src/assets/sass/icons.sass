@@ -1,0 +1,73 @@
+
+//data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 512 512'%3E%3Cpath d='   '/%3E%3C/svg%3E
+
+    
+    
+    
+.icon
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    display: inline-block
+    width: 20px
+    height: 20px
+    position: relative
+    bottom: 2px
+    vertical-align: middle
+
+@for $sizes from 2 through 10
+    .icon-#{$sizes}x
+        width: #{($sizes * 3) + 20 }px
+        height: #{($sizes * 3) + 20 }px
+
+
+.icon-search
+    background-image: url("/images/icons/search-black.svg")
+.icon-heart
+    background-image: url("/images/icons/heart-black.svg")
+.icon-bag
+    background-image: url("/images/icons/bag-black.svg")
+.icon-bag-white
+    background-image: url("/images/icons/bag-white.svg")
+
+.caret
+    display: inline-block
+    position: relative
+    border-color: #222
+    &:after
+        content: ""
+        display: block
+        position: absolute
+        top: -5px
+        left: 0
+        border-style: solid
+        border-color: inherit
+        border-left-color: transparent
+        border-top-color: transparent
+        border-width: 3px
+        
+.caret-down
+    top: -3px
+    &:after
+        transform: rotate(45deg)
+
+
+.caret-up
+    top: 3px
+    &:after
+        transform: rotate(-135deg)
+    
+.caret-right
+    &:after
+        transform: rotate(-45deg)
+
+.caret-left
+    &:after
+        transform: rotate(135deg)
+    
+.caret-sm
+    border-width: 2px
+
+@for $sizes from 2 through 5
+    .caret-#{$sizes}x
+        border-width: #{ ($sizes - 1) + 3}px

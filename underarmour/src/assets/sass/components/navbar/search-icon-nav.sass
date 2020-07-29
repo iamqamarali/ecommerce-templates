@@ -1,0 +1,63 @@
+.search-icon-nav
+    display: flex
+    align-items: center
+    .search-form
+        .form-control,.btn
+            background-color: white
+            border: 1px solid #ccc
+            border-radius: 0
+            &:focus
+                box-shadow: none
+        .form-control
+            max-width: 120px
+        .btn
+            border-left-color: transparent
+            padding: 4px 6px
+            .icon
+                width: 16px
+                height: 16px
+    .icons-nav
+        margin-left: 5px
+        flex-wrap: nowrap
+        .nav-link
+            padding: 0
+            margin-left: 10px
+        .icon
+            width: 27px
+            height: 27px
+        .nav-search-icon
+            display: none
+
+
+    
+@include media-breakpoint-down(md)
+    .search-icon-nav
+        .search-form
+            position: absolute
+            top: 0%
+            left: 0
+            right: 0
+            padding: 10px 20px
+            background-color: $main-navbar-color
+            z-index: $search-icon-nav-z-index
+            border-bottom: 1px solid $navbar-border-color
+            transition: $transition
+            .form-control
+                max-width: none
+                flex: 1
+            .form-control,
+            .btn
+                border: 0
+                font-size: 16px                    
+        .search-form.show
+            top: 100%
+        .icons-nav
+            margin-left: 5px
+            .nav-link
+                margin-left: 10px
+            .icon
+                width: 22px
+                height: 22px
+            .nav-search-icon
+                display: block
+

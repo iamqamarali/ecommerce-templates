@@ -1,0 +1,26 @@
+@import '../components/landing-page/top-banner.sass'
+
+@import '../components/landing-page/collections-three-column'
+
+
+$collections-overlay-transition: all .5s  
+    
+.collections
+    .card
+        border: 0 
+        .img-container
+            position: relative
+            .card-img-overlay
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: rgba(0,0,0,.5)
+                opacity: 0
+                user-select: none
+                transition: $collections-overlay-transition
+                &:hover
+                    opacity: 1
+                    user-select: auto
+        .card-body
+            text-align: center
+            .collection-title

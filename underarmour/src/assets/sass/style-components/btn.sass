@@ -1,0 +1,79 @@
+$white: #fff
+$black: #000
+$btn-outlined-border-width: 2px
+
+.btn-icon
+    border-radius: 0
+    
+.btn:not(.btn-icon)
+    border-radius: 0
+    transition: .5s all
+    font-size: .85em
+    font-weight: 600
+    padding: 9px 20px 8px
+    text-transform: uppercase
+    &:hover,&:focus
+        box-shadow: none
+
+.btn.btn-sm
+    padding: 5px 10px
+    font-size: .8em
+
+
+.btn.btn-white
+    background-color: $white
+    &:hover
+        background-color: $black
+        color: $white
+
+.btn.btn-outline-dark
+    background-color: transparent
+    border: $btn-outlined-border-width solid #000
+    color: $black
+    &:hover
+        color: $white
+        background-color: $black
+
+
+.btn.btn-outline-white,
+a.btn.btn-outline-white
+    border: $btn-outlined-border-width solid $white
+    color: $white
+    background-color: transparent
+    &:hover
+        background-color: $white
+        color: $black
+
+
+.btn.btn-secondary
+    background-color: $secondry-color
+    color: white
+    border: 0
+    &:hover
+        background-color: darken($secondry-color, 8%)
+
+
+.btn.btn-select
+    background-color: $light
+    text-align: left
+    padding: 5px 10px
+    text-transform: none     
+    position: relative   
+    font-size: 13px
+    &:after,
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        right: 10px
+        top: 50%
+        border: 3px solid #555
+        border-right-color: transparent
+        border-bottom-color: transparent
+    &:before
+        margin-top: -6px
+        transform: rotate(45deg)
+    &:after
+        margin-top: -1px
+        transform: rotate(-135deg)
+

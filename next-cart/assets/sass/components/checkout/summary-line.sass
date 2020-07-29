@@ -1,0 +1,24 @@
+
+.summary-line
+    background-color: $lighter
+    padding: 15px 0
+    .title
+        margin: 0
+        padding: 13px 0
+    .progress-indicator-line
+        text-align: center
+    .progress-indicator-nav
+        display: inline-flex
+        .nav-item
+        .nav-link
+            font-weight: 500
+            padding: 8px 5px
+            margin: 0 5px
+            &.active
+                font-weight: 600
+                border-bottom: 2px solid $dark
+
+
+@include media-breakpoint-down(md)
+    .summary-line
+        display: none

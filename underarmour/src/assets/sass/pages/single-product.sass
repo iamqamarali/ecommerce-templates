@@ -1,0 +1,148 @@
+
+$product-page-red-color : $secondry_color
+
+@import '../components/single-product/product-preview.sass'
+@import '../components/single-product/product-images-view.sass'
+@import '../components/single-product/product-review.sass'
+@import '../components/single-product/other-product.sass'
+
+
+
+
+.single-product-wrapper
+
+.single-product
+    .container-fluid
+        max-width: 90%
+        margin: 0 auto
+    .product-preview-container
+        position: relative
+        .product-back-link
+            text-decoration: underline
+            font-size: .8em
+            position: absolute
+            top: 10px
+            left: 10px
+            z-index: 10000
+
+
+.product-description
+    padding: 80px 0 30px
+    ul
+        padding: 0 0 0px 15px
+        li
+            margin: 0
+            padding: 5px 0
+    .links  
+        a
+            display: block
+            text-decoration: underline
+            font-size: $medium-font-size
+            margin-bottom: 10px
+            font-weight: 300
+            &:hover
+                color: darken($color-light, 25%)
+    .product-dna
+        font-size: .9em
+        color: $product-description-color
+        .product-dna-descripion
+    
+    .size-chart
+        .size-chart-table-container
+            max-height: 300px
+            padding: 20px
+            overflow: auto
+            .table
+                font-size: .75em
+                thead th
+                    border: 0 
+                tbody
+                    color: darken($color-light, 35%)
+                    td
+                        padding-top: 5px 
+                        padding-bottom: 5px 
+
+
+
+.product-share
+    display: inline-block
+    .flaticon:before
+        font-size: 1.1em
+    .btn
+        border: 2px solid $color-light
+        background-color: transparent
+        padding: 10px 15px
+        height: auto
+        color: #333
+        font-size: .8em
+        .flaticon-share
+            position: relative
+            left: -3px
+            color: darken($color-light , 15%)
+    .product-share-icons
+        vertical-align: bottom
+        display: none
+        .flaticon
+            margin-left: 15px
+            &:hover
+                color: #e51b24
+    &:hover 
+        .product-share-icons
+            display: inline-block
+
+
+// other products
+.other-products-wrapper
+    .nav-tabs
+        border-bottom: 0
+    .nav-link
+        border: 0
+        color: $dark
+        padding: 15px 0
+        margin: 0 15px
+        font-weight: 500
+        font-size: .9em
+    .nav-link.active
+        color: $product-page-red-color
+        border-bottom: 4px solid $product-page-red-color
+
+
+    
+.other-products-container
+    padding: 30px 50px 0
+    position: relative
+    .other-products-icon
+        border: 0
+        background-color: transparent
+        padding: 0
+        margin: 0
+        position: absolute
+        top: 50%
+        transform: translateY(-55px)
+        z-index: 200
+        cursor: pointer
+        &:focus
+            outline: 0
+        i:before
+            font-size: 40px
+    .btn-previous
+        left: 0px
+    .btn-next
+        right: 0px
+
+
+
+.add-review-btn-container
+    .add-review-btn
+        padding: 15px 20px
+        border-radius: 2px
+        .flaticon
+            margin-left: 5px
+            &:before
+                font-size: 12px
+
+
+@include media-breakpoint-down(lg)
+    .single-product
+        .container-fluid
+            max-width: 100%    

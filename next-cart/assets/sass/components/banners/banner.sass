@@ -1,0 +1,86 @@
+$banner-title-font-size: 2.4em
+$banner-sm-title-font-size: 1.9em
+$banner-subtitle-font-size: 1em
+
+$banner-centered-title-font-size: 1.3em
+
+.banner
+    position: relative
+    height: 400px
+.banner-img
+    height: 100%
+.banner-cta-container
+    max-width: 400px
+    position: absolute
+    left: 10%
+    top: 50%
+    transform: translateY(-50%)
+.banner-cta-container.color-white
+    color: white
+
+.banner-title
+    font-size: $banner-title-font-size
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 1em
+    margin: 20px 0
+.banner-subtitle
+    font-size: $banner-subtitle-font-size
+    font-weight: 300
+    margin: 20px 0
+    text-transform: uppercase
+    line-height: 1.2em
+.banner-description
+    font-weight: 300
+    font-size: .9em
+    margin: 20px 0
+
+.banner-btns-wrapper
+    margin: 15px 0
+
+
+
+
+/*----- centered banner  -----*/
+.banner-cta-container.centered
+    text-align: center
+    left: 50%
+    top: auto
+    bottom: 5%
+    transform: translate(-50%, 0%)            
+    .banner-title
+        font-size: $banner-centered-title-font-size
+        letter-spacing: .7px
+        margin-bottom: 20px
+    .banner-subtitle
+        display: none
+        
+
+
+
+
+@include media-breakpoint-down(md)
+    .banner
+    .banner-cta-container
+        top: auto
+        bottom: 10%
+        transform: none
+
+@include media-breakpoint-down(sm) 
+    .banner
+        height: 200px
+    .banner-title
+        font-size: $banner-sm-title-font-size
+    .banner-subtitle
+        margin: 15px 0
+    .banner-cta-container
+        top: auto
+        bottom: 2%
+        transform: none
+    .banner-cta-container.centered
+        transform: translate(-50%, 0%)    
+
+
+@include media-breakpoint-down(xs) 
+    .banner
+        height: 110px

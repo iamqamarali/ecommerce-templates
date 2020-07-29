@@ -1,0 +1,33 @@
+
+
+.breadcrumb-wrapper
+    display: flex
+    padding: 10px 0
+    font-size: .8em
+    align-items: center
+    a
+        text-decoration: underline
+        &:hover
+            background-color: $secondry
+            color: $primary
+    .breadcrumb-back-link
+        margin-right: 20px
+        padding: 3px 5px
+        margin-top: -2px
+        &:hover
+            background-color: $secondry
+            color: $primary
+    .breadcrumb
+        margin: 0
+        padding: 0
+        background-color: transparent
+        .breadcrumb-item
+            color: $dark
+            padding-left: 2px
+            &:before
+                padding-right: 4px
+            a
+                display: inline-block
+                padding: 3px 5px
+        .breadcrumb-item.active
+            padding: 4px 3px

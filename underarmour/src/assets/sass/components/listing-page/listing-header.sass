@@ -1,0 +1,22 @@
+$right-font-size: 14px
+
+.listing-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .heading
+        font-weight: 400
+        margin-bottom: 0
+    .right
+        .results
+            font-size: $right-font-size
+            font-weight: 500
+            margin-right: 10px
+        .relevance
+            min-width: 150px
+
+@include media-breakpoint-down(sm)
+    .listing-header
+        display: block
+        .left
+            margin-bottom: 20px

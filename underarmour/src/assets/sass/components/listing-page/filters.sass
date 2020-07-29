@@ -1,0 +1,199 @@
+$dropdown-padding: 15px
+$dropdown-md-font-size: 12px
+
+$filters-background-color: white
+    
+.fixed-filters
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: $fixed-filters-z-index
+    .filters-container
+        padding: 10px
+        border-bottom: 1px solid $light-border-color 
+        background-color: $filters-background-color
+        .nav
+            .nav-item
+                .selected-filter-length
+                    display: inline-block
+                .tag
+                    display: none
+
+.mobile-filter-buttons
+    display: flex
+
+/*------ dropdown-styles ---------*/
+.listing-filters
+    >.nav 
+        margin-left: -15px
+        .nav-item
+            .dropdown
+                .caret
+                    border-color: $color-light
+                .dropdown-menu
+                .dropdown-colors-menu
+                    min-width: 220px
+                    padding: $dropdown-padding
+                    .color
+                        display: inline-block
+                        margin-right: 10px
+                        margin-bottom: 8px
+                        &.active,
+                        &:hover
+                            text-decoration: none
+                            .color-img
+                                border: 2px solid lighten($dark , 10%)
+                        
+                    .color-img
+                        display: block
+                        max-width: 37px
+                        border: 1px solid $light-border-color
+                    .color-name
+                        display: block
+                        font-weight: 300
+                        font-size: 12px
+                .dropdown-sizes-menu
+                    min-width: 350px
+                    padding: $dropdown-padding
+                    .dropdown-filter-title
+                        margin-bottom: 10px
+                    .dropdown-size,
+                    .dropdown-fit
+                        display: inline-block
+                    .dropdown-size-item,
+                    .dropdown-fit-item
+                        display: inline-block
+                        padding: 7px 10px
+                        margin-bottom: 7px
+                        text-align: center
+                        border: 1px solid $light-border-color
+                        text-decoration: none
+                        &.active,
+                        &:hover
+                            border: 1px solid $black
+                    .dropdown-size-item
+                        width: 30.33%
+                        margin-right: 3%
+                    .dropdown-fit-item
+                        display: block
+                        padding: 7px 20px
+                    .row
+                        [class*="col-"]:first-child
+                            border-right: 1px solid darken($light-border-color, 0%)
+                .dropdown-columns-menu
+                    min-width: 380px
+                    padding: $dropdown-padding
+                    .dropdown-columns-item
+                        display: block
+                        text-decoration: none
+                        padding: 2px 4px
+                        &.active,
+                        &:hover
+                            background: $primary
+                            color: $white
+
+
+/*---- Tags  ----*/
+.listing-filters
+    >.nav 
+        .nav-item
+            position: relative
+            .selected-filter-length
+                display: none
+            .tag
+                position: absolute
+                top: 100%
+                left: 10px
+                margin-right: -15px
+                margin-top: 5px
+                z-index: $dropdown-z-index - 500
+
+
+.static-filters
+    .listing-filters
+        >.nav 
+            margin-bottom: 60px
+
+@include media-breakpoint-down(md)
+    .listing-filters
+        >.nav
+            margin-left: 0
+            .nav-item
+                .selected-filter-length
+                    display: inline-block
+                .tag
+                    display: none
+            .dropdown
+                >.btn
+                    padding: 7px 13px 7px 8px
+                    font-size: $dropdown-md-font-size
+                    font-weight: 500
+                .dropdown-menu
+                    font-size: $dropdown-md-font-size
+
+    /*----- static filters ------*/
+    .static-filters
+        .listing-filters
+            >.nav 
+                margin-bottom: 0px
+
+ 
+@include media-breakpoint-down(sm)
+    .fixed-filters
+        display: none
+    
+    /*------ Mobile filters  -------*/
+    .static-filters
+        position: fixed
+        top: -100%
+        right: 0
+        left: 0
+        height: 100%
+        z-index: $fixed-filters-z-index + 100
+        background-color: $filters-background-color
+        transition: all .5s ease-in-out
+        &.open
+            top: 0%
+        .listing-filters
+            overflow: auto
+            max-height: calc(100vh - 90px)
+            >.nav
+                display: block
+                >.nav-item,
+                .dropdown,
+                .btn
+                    display: block
+                    width: 100%
+                    text-align: left
+                    border: 0
+                .btn
+                    padding: 15px
+                    background-color: $light
+                    font-size: 13px
+                    position: relative
+                    .arrow
+                        position: absolute
+                        top: 50%
+                        right: 15px
+                        transform: translateY(-50%)
+                        border-color: $dark
+                .dropdown-menu
+                    display: none
+                    width: 100%
+                    min-width: auto
+                    position: relative
+                .dropdown-menu.open
+                    display: block
+        .static-filters-footer
+            background-color: #222
+            font-size: 14px
+            color: #aaa
+            padding: 20px 15px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0

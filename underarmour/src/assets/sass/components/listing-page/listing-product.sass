@@ -1,0 +1,106 @@
+$hover-border-color: $dark 
+$product-body-font-size: 13px
+$product-title-font-size: 14px
+
+$product-title-color: $dark
+$product-color: #666
+
+.listing-product
+    .card
+        border: 0
+        margin: -10px
+        padding: 10px
+        position: relative
+        border: 1px solid transparent
+        border-radius: 0
+        .card-body
+            padding: 10px 5px
+    &:hover
+        .card
+            border-color: $hover-border-color
+
+
+/*---- img container ----*/
+.listing-product
+    .product-img-container
+        position: relative
+        .product-img-back
+            position: absolute
+            left: 0
+            top: 0 
+            z-index: 20
+            display: none
+        .view-message
+            display: block
+            perspective: 1000px
+            position: absolute
+            bottom: 2px
+            left: 0 
+            right: 0 
+            text-align: center
+            z-index: 30
+            span
+                display: inline-block
+                background: black
+                color: white
+                font-size: 13px
+                padding: 7px 14px               
+                transform-origin: 100% 100%
+                transform: rotateX(90deg);
+                opacity: 0
+                transition: transform .3s
+        &:hover
+            .product-img-back
+                display: block
+            .view-message
+                span
+                    opacity: 1
+                    transform: rotateX(0deg);
+
+.listing-product
+    .card
+        .card-body
+            font-size: $product-body-font-size
+            color: $product-color
+        .product-colors-length,
+        .product-colors
+            margin-bottom: 5px
+            height: 20px
+        .product-colors
+            display: none
+            img.color
+                max-width: 30px
+                padding: 2px
+                border: 1px solid $light-border-color
+                margin-left: 3px
+                &:hover
+                    border: 1px solid $dark
+        .product-title
+            font-size: $product-title-font-size
+            font-weight: 500
+            color: $product-title-color
+        .product-category
+        .product-price
+        .product-original_price
+            margin-left: 5px
+            text-decoration: line-through
+        .product-message
+        
+
+
+/*--- colors icons  ----*/
+.listing-product
+    &:hover
+        .card
+            .product-colors-length
+                display: none
+            .product-colors
+                display: block
+
+@include media-breakpoint-down(md)
+    .listing-product
+        .card
+            .product-colors-length
+                display: none
+            .product-colors
+                display: block
