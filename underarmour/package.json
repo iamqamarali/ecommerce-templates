@@ -12,7 +12,8 @@
     "imagesloaded": "^4.1.4",
     "masonry-layout": "^4.2.2",
     "tiny-slider": "^2.8.7",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-router": "^3.4.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",

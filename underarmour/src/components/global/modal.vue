@@ -49,7 +49,7 @@
             this.programmatic && this.open()
         },
         methods:{
-            setLoading(val){
+            setLoading(val){ 
                 this.isLoading = val
             },
 

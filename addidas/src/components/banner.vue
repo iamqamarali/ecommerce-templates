@@ -14,14 +14,14 @@
                 <div class="banner-btn-container"
                     v-for="(cta, index) in data.ctas" :key="index"
                     >
-                        <a class="btn" :class="{ 
+                        <router-link class="btn" :class="{ 
                                 'btn-white': color =='white',
                                 'btn-black' : color == 'black'
                             }"
-                            :href="cta.url">
+                            :to="cta.url">
                             {{cta.text}}
                             <i class=" ml-3 fi fi-5x flaticon-next" ></i>   
-                        </a>
+                        </router-link>
                 </div>
             </div>
         </div>

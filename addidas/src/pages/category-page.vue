@@ -66,11 +66,11 @@ import recentProducts from '../components/recent-products'
                 category:{
                     title: 'Women',
                     links:[
-                        {text: 'shoes' , url:'/shoes'},
-                        {text: 'tops' , url:'/shoes'},
-                        {text: 'pants and tights' , url:'/shoes'},
-                        {text: 'new arrivals' , url:'/shoes'},
-                        {text: 'best sellers' , url:'/shoes'},
+                        {text: 'shoes' , url:'/listing'},
+                        {text: 'tops' , url:'/listing'},
+                        {text: 'pants and tights' , url:'/listing'},
+                        {text: 'new arrivals' , url:'/listing'},
+                        {text: 'best sellers' , url:'/listing'},
                     ]
                 },
                 bannerTop: {
@@ -78,33 +78,33 @@ import recentProducts from '../components/recent-products'
                     title: 'P.O.D.SYSTEM',
                     description: 'P.O.D.SYSTEM embodies the same mantra that helped Paul Pogba succeed: Great alone better together..',
                     ctas:[
-                        {text:'shop now' , url:'/shop-now'},
-                        {text:'Explore more' , url:'/shop-men'}                    
+                        {text:'shop now' , url:'/listing'},
+                        {text:'Explore more' , url:'/listing'}                    
                     ]
                 },
                 banner2:{
                     img: 'https://images.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/October_Women_GLP_Bras_teaser_card_1_480_tcm221-290346.jpg',
                     ctas:[
-                        {text:'shop Bras' , url:'/shop-now'},
+                        {text:'shop Bras' , url:'/listing'},
                     ]                    
                 },
                 banner3:{
                     img: 'https://images.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/October_Women_GLP_Tops_teaser_card_2_480_tcm221-290349.jpg',
                     ctas:[
-                        {text:'shop hoodies' , url:'/shop-now'},
+                        {text:'shop hoodies' , url:'/listing'},
                     ]                    
                 },
                 banner4:{
                     img: 'https://images.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/October_Women_GLP_Tights_teaser_card_3_480_tcm221-290348.jpg',
                     ctas:[
-                        {text:'shop tights' , url:'/shop-now'},
+                        {text:'shop tights' , url:'/listing'},
                     ]                    
                 },
                 banner5:{
                     img: 'https://images.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/BuilttoDefy_TC_MOB_Women_1200x960_tcm221-290345.jpg',
                     title: 'built to defy',
                     ctas:[
-                        {text:'shop now' , url:'/shop-now'},
+                        {text:'shop now' , url:'/listing'},
                     ]                    
                 },      
                 banner6:{
@@ -112,7 +112,7 @@ import recentProducts from '../components/recent-products'
                     title: 'RUNNING IS IN <br>THE VEINS',
                     description: 'Run fall in the new Ultraboost',
                     ctas:[
-                        {text:'shop now' , url:'/shop-now'},
+                        {text:'shop now' , url:'/listing'},
                     ]                    
                 }          
  

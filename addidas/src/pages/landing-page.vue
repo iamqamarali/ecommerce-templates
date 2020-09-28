@@ -57,22 +57,22 @@ export default {
                 title: 'Harden VOL.3',
                 subtitle: 'Slow DOWN FAST',
                 ctas:[
-                    {text:'shop now' , url:'/shop-now'},
-                    {text:'shop harden collection' , url:'/shop-harden'}                    
+                    {text:'shop now' , url:'/category'},
+                    {text:'shop harden collection' , url:'/category'}                    
                 ]
             },
             banner2: {
                 img: 'https://images.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/alphaskin_dame_mobile_tcm221-294707.jpg',
                 title: 'alphaskin',
                 ctas:[
-                    {text:'shop now' , url:'/shop-now'}
+                    {text:'shop now' , url:'/category'}
                 ]
             },
             banner3: {
                 img: 'https://images.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/NextWave_Madbounce_Featurecard_2_1200x960_tcm221-285556.jpg',
                 title: 'pro bounce',
                 ctas:[
-                    {text:'shop now' , url:'/shop-now'}
+                    {text:'shop now' , url:'/category'}
                 ]
             },
             banner4: {
@@ -80,8 +80,8 @@ export default {
                 title: 'A PRODUCT OF HERITAGE',
                 subtitle: 'Fusing archival designs with modern technology.',
                 ctas:[
-                    {text:'shop now' , url:'/shop-now'},
-                    {text:'shop men' , url:'/shop-men'}                    
+                    {text:'shop now' , url:'/category'},
+                    {text:'shop men' , url:'/category'}                    
                 ]
             },
             trendingProducts:[
